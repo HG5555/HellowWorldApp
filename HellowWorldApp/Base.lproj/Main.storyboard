@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="395-Ee-STY">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,20 +19,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbA-Uf-QeY">
-                                <rect key="frame" x="142.33333333333334" y="294" width="105.66666666666666" height="41"/>
+                                <rect key="frame" x="142" y="294" width="106" height="41"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="35"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sV-9g-Cwu">
-                                <rect key="frame" x="80" y="656" width="230" height="44"/>
+                                <rect key="frame" x="80" y="651.66666666666663" width="230" height="48.333333333333371"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="xs3-PG-3zU"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Text">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Show Text">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -56,15 +62,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.153846153846153" y="58.293838862559241"/>
+            <point key="canvasLocation" x="-209" y="58"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ge8-SK-0gi">
+            <objects>
+                <viewController id="395-Ee-STY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LCE-p0-frL">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lgG-tR-xLP">
+                                <rect key="frame" x="16" y="84" width="358" height="706"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwiftImage" translatesAutoresizingMaskIntoConstraints="NO" id="zV2-5r-nT5">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="345"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text to check for line breaks. Text to check for line breaks. Text to check for line breaks." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPw-lm-Wr6">
+                                        <rect key="frame" x="0.0" y="361" width="358" height="345"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DGK-ZF-sl7"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="DGK-ZF-sl7" firstAttribute="bottom" secondItem="lgG-tR-xLP" secondAttribute="bottom" constant="20" id="CmD-SK-CPR"/>
+                            <constraint firstItem="lgG-tR-xLP" firstAttribute="top" secondItem="DGK-ZF-sl7" secondAttribute="top" constant="40" id="Q0A-rW-DS6"/>
+                            <constraint firstItem="lgG-tR-xLP" firstAttribute="leading" secondItem="DGK-ZF-sl7" secondAttribute="leading" constant="16" id="RPS-k5-II3"/>
+                            <constraint firstAttribute="trailing" secondItem="lgG-tR-xLP" secondAttribute="trailing" constant="16" id="oKS-1E-Zjj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxa-fN-4rL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733.84615384615381" y="57.582938388625593"/>
         </scene>
     </scenes>
     <resources>
+        <image name="SwiftImage" width="333.33334350585938" height="250"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
